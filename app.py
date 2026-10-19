@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import sqlite3
@@ -11,10 +10,12 @@ st.set_page_config(
     layout="wide"
 )
 
+
 # Project files
-PROJECT_FOLDER = Path.home() / "Desktop" / "MLNG"
+PROJECT_FOLDER = Path(__file__).parent
 MODEL_PATH = PROJECT_FOLDER / "crop_suitability_model.pkl"
 DATABASE_PATH = PROJECT_FOLDER / "crop_growing_database.db"
+
 
 st.title("🌱 Crop-Growing Condition Monitor")
 st.write(
